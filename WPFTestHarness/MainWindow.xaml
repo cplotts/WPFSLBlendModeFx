@@ -1,0 +1,41 @@
+﻿<Window
+	x:Class="WPFTestHarness.MainWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="Blend Mode Effect Library Test Harness"
+	Width="350"
+	SizeToContent="Height"
+>
+	<StackPanel
+		Margin="10"
+		Button.Click="button_Click"
+	>
+		<TextBlock
+			FontSize="12pt"
+			FontWeight="Bold"
+			Margin="10,10,10,0"
+			TextAlignment="Center"
+			TextWrapping="Wrap"
+		>
+			Blend Mode Effect Library
+		</TextBlock>
+		<TextBlock
+			FontSize="12pt"
+			FontWeight="Bold"
+			Margin="10,0,10,10"
+			TextAlignment="Center"
+			TextWrapping="Wrap"
+		>
+			Test Harness
+		</TextBlock>
+
+		<Button Margin="10,2,10,2" FontSize="11pt">LinearBurnTestWindow</Button>
+		<Button Margin="10,2,10,2" FontSize="11pt">GradientTestWindow</Button>
+		<Button Margin="10,2,10,2" FontSize="11pt">GradientContoursTestWindow</Button>
+		<Button Margin="10,2,10,2" FontSize="11pt">ImageTestWindow</Button>
+		<Button Margin="10,2,10,2" FontSize="11pt">HelloWorldTestWindow</Button>
+		<Button Margin="10,2,10,2" FontSize="11pt">HelloWorldVideoTestWindow</Button>
+		<Button Margin="10,2,10,2" FontSize="11pt">BlueBulbWindow</Button>
+		<Button Margin="10,2,10,2" FontSize="11pt">Close</Button>
+	</StackPanel>
+</Window>

@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <UsingTask TaskName="ShaderBuildTask.PixelShaderCompile" AssemblyName="ShaderBuildTask, Version=1.0.3072.18169, Culture=neutral, PublicKeyToken=44e467d1687af125" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{25F23180-F1BE-42F2-A58E-7F77BB03A987}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BlendModeEffectLibrary</RootNamespace>
+    <AssemblyName>BlendModeEffectLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EffectFiles\AverageEffect.cs" />
+    <Compile Include="EffectFiles\BlendModeEffect.cs" />
+    <Compile Include="EffectFiles\ColorBurnEffect.cs" />
+    <Compile Include="EffectFiles\ColorDodgeEffect.cs" />
+    <Compile Include="EffectFiles\ColorEffect.cs" />
+    <Compile Include="EffectFiles\DarkenEffect.cs" />
+    <Compile Include="EffectFiles\DifferenceEffect.cs" />
+    <Compile Include="EffectFiles\HueEffect.cs" />
+    <Compile Include="EffectFiles\LuminosityEffect.cs" />
+    <Compile Include="EffectFiles\SaturationEffect.cs" />
+    <Compile Include="EffectLibrary.cs">
+    </Compile>
+    <Compile Include="EffectFiles\ExclusionEffect.cs" />
+    <Compile Include="EffectFiles\GlowEffect.cs" />
+    <Compile Include="EffectFiles\HardLightEffect.cs" />
+    <Compile Include="EffectFiles\HardMixEffect.cs" />
+    <Compile Include="EffectFiles\LightenEffect.cs" />
+    <Compile Include="EffectFiles\LinearBurnEffect.cs" />
+    <Compile Include="EffectFiles\LinearDodgeEffect.cs" />
+    <Compile Include="EffectFiles\LinearLightEffect.cs" />
+    <Compile Include="EffectFiles\MultiplyEffect.cs" />
+    <Compile Include="EffectFiles\NegationEffect.cs" />
+    <Compile Include="EffectFiles\NormalEffect.cs" />
+    <Compile Include="EffectFiles\OverlayEffect.cs" />
+    <Compile Include="EffectFiles\PhoenixEffect.cs" />
+    <Compile Include="EffectFiles\PinLightEffect.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EffectFiles\ReflectEffect.cs" />
+    <Compile Include="EffectFiles\ScreenEffect.cs" />
+    <Compile Include="EffectFiles\SoftLightEffect.cs" />
+    <Compile Include="EffectFiles\VividLightEffect.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+    <Effect Include="ShaderSource\LinearBurnEffect.fx" />
+    <Effect Include="ShaderSource\DarkenEffect.fx" />
+    <Effect Include="ShaderSource\LightenEffect.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Effect Include="ShaderSource\MultiplyEffect.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Effect Include="ShaderSource\DifferenceEffect.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Effect Include="ShaderSource\NormalEffect.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Effect Include="ShaderSource\ScreenEffect.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Effect Include="ShaderSource\ColorBurnEffect.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Effect Include="ShaderSource\ColorDodgeEffect.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Effect Include="ShaderSource\LinearDodgeEffect.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Effect Include="ShaderSource\OverlayEffect.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Effect Include="ShaderSource\ExclusionEffect.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Effect Include="ShaderSource\SoftLightEffect.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Effect Include="ShaderSource\HardLightEffect.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Effect Include="ShaderSource\VividLightEffect.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Effect Include="ShaderSource\LinearLightEffect.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Effect Include="ShaderSource\PinLightEffect.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Effect Include="ShaderSource\HardMixEffect.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Effect Include="ShaderSource\ReflectEffect.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Effect Include="ShaderSource\GlowEffect.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Effect Include="ShaderSource\NegationEffect.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Effect Include="ShaderSource\PhoenixEffect.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VisualBasic.PowerPacks.10.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Basic PowerPacks 10.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ShaderSource\ColorEffect.ps" />
+    <Effect Include="ShaderSource\AverageEffect.fx" />
+    <None Include="ShaderSource\ColorEffect.fx" />
+    <None Include="ShaderSource\HueEffect.fx" />
+    <None Include="ShaderSource\LuminosityEffect.fx" />
+    <Resource Include="ShaderSource\LuminosityEffect.ps" />
+    <None Include="ShaderSource\SaturationEffect.fx" />
+    <Resource Include="ShaderSource\SaturationEffect.ps" />
+    <Resource Include="ShaderSource\HueEffect.ps" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EffectCompile" Condition="'@(Effect)' != '' ">
+    <PixelShaderCompile Sources="@(Effect)">
+      <Output TaskParameter="Outputs" ItemName="Resource" />
+    </PixelShaderCompile>
+  </Target>
+  <PropertyGroup>
+    <!-- Add effect compilation to the PrepareResourcesDependsOn so that the effect fx  get compiled before resources are collected -->
+    <PrepareResourcesDependsOn>EffectCompile;$(PrepareResourcesDependsOn)</PrepareResourcesDependsOn>
+  </PropertyGroup>
+</Project>

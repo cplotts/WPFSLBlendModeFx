@@ -1,0 +1,70 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E86BFE46-0740-4037-B4E7-19F563310102}"
+	ProjectSection(SolutionItems) = preProject
+		BackgroundEffectBehavior.png = BackgroundEffectBehavior.png
+		BlendModes.psd = BlendModes.psd
+		BlendModes2.psd = BlendModes2.psd
+		BlendModesOpacityTester.psd = BlendModesOpacityTester.psd
+		H.design = H.design
+		HelloWorld.design = HelloWorld.design
+		HelloWorldColorBurn600.png = HelloWorldColorBurn600.png
+		HOnImage.png = HOnImage.png
+		HOnImage600.png = HOnImage600.png
+		HOnImageColorBurn.png = HOnImageColorBurn.png
+		HOnImageColorBurn600.png = HOnImageColorBurn600.png
+		HOnImageColorBurn600NoCigar.png = HOnImageColorBurn600NoCigar.png
+		HOnImageColorBurn600Success.png = HOnImageColorBurn600Success.png
+		PhotoshopMathFP.hlsl = PhotoshopMathFP.hlsl
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorPicker", "ColorPicker\ColorPicker.csproj", "{ED67A75F-5F76-43A8-9CD0-171212D599CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFBlendModeEffectLibrary", "WPFBlendModeEffectLibrary\WPFBlendModeEffectLibrary.csproj", "{25F23180-F1BE-42F2-A58E-7F77BB03A987}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFTestHarness", "WPFTestHarness\WPFTestHarness.csproj", "{C174652D-C12B-445D-8F80-10DF64FDB92A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.DwayneNeed", "Microsoft.DwayneNeed\Microsoft.DwayneNeed.csproj", "{80A10B86-6615-4440-93B0-C943DF5B8693}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://teamsrvse:8080/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ColorPicker\\ColorPicker.csproj
+		SccProjectName1 = ColorPicker
+		SccLocalPath1 = ColorPicker
+		SccProjectUniqueName2 = WPFBlendModeEffectLibrary\\WPFBlendModeEffectLibrary.csproj
+		SccProjectName2 = WPFBlendModeEffectLibrary
+		SccLocalPath2 = WPFBlendModeEffectLibrary
+		SccProjectUniqueName3 = WPFTestHarness\\WPFTestHarness.csproj
+		SccProjectName3 = WPFTestHarness
+		SccLocalPath3 = WPFTestHarness
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED67A75F-5F76-43A8-9CD0-171212D599CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED67A75F-5F76-43A8-9CD0-171212D599CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED67A75F-5F76-43A8-9CD0-171212D599CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED67A75F-5F76-43A8-9CD0-171212D599CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25F23180-F1BE-42F2-A58E-7F77BB03A987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25F23180-F1BE-42F2-A58E-7F77BB03A987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25F23180-F1BE-42F2-A58E-7F77BB03A987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25F23180-F1BE-42F2-A58E-7F77BB03A987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C174652D-C12B-445D-8F80-10DF64FDB92A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C174652D-C12B-445D-8F80-10DF64FDB92A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C174652D-C12B-445D-8F80-10DF64FDB92A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C174652D-C12B-445D-8F80-10DF64FDB92A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80A10B86-6615-4440-93B0-C943DF5B8693}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80A10B86-6615-4440-93B0-C943DF5B8693}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80A10B86-6615-4440-93B0-C943DF5B8693}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80A10B86-6615-4440-93B0-C943DF5B8693}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

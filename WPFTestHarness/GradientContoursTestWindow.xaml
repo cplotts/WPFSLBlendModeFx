@@ -1,0 +1,219 @@
+﻿<Window
+	x:Class="WPFTestHarness.GradientContoursTestWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:bme="clr-namespace:BlendModeEffectLibrary;assembly=BlendModeEffectLibrary"
+	xmlns:cp="clr-namespace:ColorPicker;assembly=ColorPicker"
+	Title="Blend Mode Effects Test Window (Gradients)"
+	Height="950"
+	Width="900"
+>
+	<Window.Resources>
+		<LinearGradientBrush
+			x:Key="whiteToBlackTopToBottomGradientBrush"
+			StartPoint="0,0"
+			EndPoint="0,1"
+		>
+			<GradientStop Color="#FFFFFFFF" Offset="0"/>
+			<GradientStop Color="#FF000000" Offset="1"/>
+		</LinearGradientBrush>
+
+		<LinearGradientBrush
+			x:Key="blackToWhiteLeftToRightGradientBrush"
+			StartPoint="0,0"
+			EndPoint="1,0"
+		>
+			<GradientStop Color="#FF000000" Offset="0"/>
+			<GradientStop Color="#FFFFFFFF" Offset="1"/>
+		</LinearGradientBrush>
+
+		<LinearGradientBrush
+			x:Key="whiteToBlackTopToBottomGradientBrushOpacityBound"
+			StartPoint="0,0"
+			EndPoint="0,1"
+		>
+			<GradientStop Color="#FFFFFFFF" Offset="0"/>
+			<GradientStop Color="#FF000000" Offset="1"/>
+		</LinearGradientBrush>
+
+		<LinearGradientBrush
+			x:Key="blackToWhiteLeftToRightGradientBrushOpacityBound"
+			StartPoint="0,0"
+			EndPoint="1,0"
+		>
+			<GradientStop Color="#FF000000" Offset="0"/>
+			<GradientStop Color="#FFFFFFFF" Offset="1"/>
+		</LinearGradientBrush>
+
+		<GeometryDrawing x:Key="geometryDrawing" Brush="{StaticResource blackToWhiteLeftToRightGradientBrushOpacityBound}">
+			<GeometryDrawing.Geometry>
+				<RectangleGeometry Rect="0,0,1,1"/>
+			</GeometryDrawing.Geometry>
+		</GeometryDrawing>
+		
+		<ImageBrush x:Key="imageBrushTexture">
+			<ImageBrush.ImageSource>
+				<DrawingImage Drawing="{StaticResource geometryDrawing}"/>
+			</ImageBrush.ImageSource>
+		</ImageBrush>
+	</Window.Resources>
+
+	<Grid>
+		<Grid.Background>
+			<ImageBrush ImageSource="Resources/MSwanson - Wide - Water 06.jpg" Stretch="UniformToFill"/>
+		</Grid.Background>
+
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+
+		<TextBlock
+			x:Name="aLabel"
+			Grid.Row="0"
+			Grid.Column="0"
+			HorizontalAlignment="Center"
+			Margin="5"
+			FontFamily="Verdana"
+			FontSize="24"
+			Text="A"
+		/>
+		<Button
+			Grid.Row="0"
+			Grid.Column="0"
+			Grid.ColumnSpan="2"
+			HorizontalAlignment="Center"
+			Margin="5"
+			Padding="5"
+			FontFamily="Verdana"
+			FontSize="20"
+			Content="Swap"
+			Click="swap_Click"
+		/>
+		<TextBlock
+			x:Name="bLabel"
+			Grid.Row="0"
+			Grid.Column="1"
+			HorizontalAlignment="Center"
+			Margin="5"
+			FontFamily="Verdana"
+			FontSize="24"
+			Text="B"
+		/>
+		<TextBlock
+			Grid.Row="0"
+			Grid.Column="2"
+			HorizontalAlignment="Center"
+			Margin="5"
+			FontFamily="Verdana"
+			FontSize="24"
+			Text="R"
+		/>
+
+		<Rectangle
+			x:Name="aBorder"
+			Grid.Row="1"
+			Grid.Column="0"
+			Width="200"
+			Height="200"
+			Margin="10"
+			Fill="{StaticResource whiteToBlackTopToBottomGradientBrush}"
+		/>
+		<Rectangle
+			x:Name="bBorder"
+			Grid.Row="1"
+			Grid.Column="1"
+			Width="200"
+			Height="200"
+			Margin="10"
+			Fill="{StaticResource blackToWhiteLeftToRightGradientBrush}"
+		/>
+		<Rectangle
+			x:Name="resultBorder"
+			Grid.Row="1"
+			Grid.Column="2"
+			Width="200"
+			Height="200"
+			Margin="10"
+			Fill="{StaticResource whiteToBlackTopToBottomGradientBrushOpacityBound}"
+		>
+			<Rectangle.Effect>
+				<bme:NormalEffect BInput="{StaticResource imageBrushTexture}"/>
+			</Rectangle.Effect>
+		</Rectangle>
+
+		<StackPanel
+			Grid.Row="2"
+			Grid.Column="0"
+			Orientation="Vertical"
+		>
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+				<TextBlock Text="Opacity" VerticalAlignment="Center" Foreground="DarkBlue"/>
+				<Slider
+					x:Name="aOpacitySlider"
+					Width="150"
+					Margin="5"
+					Minimum="0"
+					Maximum="1"
+					SmallChange="0.1"
+					LargeChange="0.2"
+					Value="1"
+					ValueChanged="opacitySlider_ValueChanged"
+				/>
+				<TextBlock
+					Text="{Binding ElementName=aOpacitySlider, Path=Value, StringFormat=F1}"
+					VerticalAlignment="Center"
+				/>
+			</StackPanel>
+		</StackPanel>
+
+		<StackPanel
+			Grid.Row="2"
+			Grid.Column="1"
+			Orientation="Vertical"
+		>
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+				<TextBlock Text="Opacity" VerticalAlignment="Center" Foreground="DarkBlue"/>
+				<Slider
+					x:Name="bOpacitySlider"
+					Width="150"
+					Margin="5"
+					Minimum="0"
+					Maximum="1"
+					SmallChange="0.1"
+					LargeChange="0.2"
+					Value="1"
+					ValueChanged="opacitySlider_ValueChanged"
+				/>
+				<TextBlock
+					Text="{Binding ElementName=bOpacitySlider, Path=Value, StringFormat=F1}"
+					VerticalAlignment="Center"
+				/>
+			</StackPanel>
+		</StackPanel>
+
+		<Image
+			x:Name="resultImage"
+			Grid.Row="2"
+			Grid.Column="2"
+			Width="200"
+			Height="200"
+			Margin="10"
+		/>
+
+		<ListBox
+			x:Name="effectsListBox"
+			Grid.Row="3"
+			Grid.Column="2"
+			Margin="30,10"
+			SelectionChanged="effectsListBox_SelectionChanged"
+		/>
+	</Grid>
+</Window>

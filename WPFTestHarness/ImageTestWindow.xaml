@@ -1,0 +1,186 @@
+﻿<Window
+	x:Class="WPFTestHarness.ImageTestWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:bme="clr-namespace:BlendModeEffectLibrary;assembly=BlendModeEffectLibrary"
+	xmlns:cp="clr-namespace:ColorPicker;assembly=ColorPicker"
+	Title="Blend Mode Effects Test Window (Images)"
+	Height="725"
+	Width="1050"
+>
+	<Window.Resources>
+		<ImageBrush
+			x:Key="imageBrushTexture"
+			ImageSource="{Binding ElementName=bImageComboBox, Path=SelectedValue}"
+			Opacity="{Binding ElementName=bOpacitySlider, Path=Value}"
+		/>
+	</Window.Resources>
+
+	<Grid>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="250"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+
+			<TextBlock
+				Grid.Row="0"
+				Grid.Column="0"
+				HorizontalAlignment="Center"
+				Margin="5"
+				FontFamily="Verdana"
+				FontSize="24"
+				Text="A"
+			/>
+			<TextBlock
+				Grid.Row="0"
+				Grid.Column="1"
+				HorizontalAlignment="Center"
+				Margin="5"
+				FontFamily="Verdana"
+				FontSize="24"
+				Text="B"
+			/>
+			<TextBlock
+				Grid.Row="0"
+				Grid.Column="2"
+				HorizontalAlignment="Center"
+				Margin="5"
+				FontFamily="Verdana"
+				FontSize="24"
+				Text="R"
+			/>
+
+			<Image
+				x:Name="aImage"
+				Grid.Row="1"
+				Grid.Column="0"
+				Width="325"
+				Height="244"
+				Source="{Binding ElementName=aImageComboBox, Path=SelectedValue}"
+			/>
+			<Image
+				x:Name="bImage"
+				Grid.Row="1"
+				Grid.Column="1"
+				Width="325"
+				Height="244"
+				Source="{Binding ElementName=bImageComboBox, Path=SelectedValue}"
+			/>
+			<Image
+				x:Name="rImage"
+				Grid.Row="1"
+				Grid.Column="2"
+				Width="325"
+				Height="244"
+				Source="{Binding ElementName=aImageComboBox, Path=SelectedValue}"
+				Opacity="{Binding ElementName=aOpacitySlider, Path=Value}"
+			>
+				<Image.Effect>
+					<bme:NormalEffect>
+						<bme:NormalEffect.BInput>
+							<ImageBrush ImageSource="{Binding ElementName=bImageComboBox, Path=SelectedValue}"/>
+						</bme:NormalEffect.BInput>
+					</bme:NormalEffect>
+				</Image.Effect>
+			</Image>
+
+			<StackPanel
+				Grid.Row="2"
+				Grid.Column="0"
+				Orientation="Vertical"
+			>
+				<ComboBox
+					x:Name="aImageComboBox"
+					HorizontalAlignment="Center"
+					Margin="10"
+					DisplayMemberPath="DisplayName"
+					SelectedValuePath="Image.Source"
+					SelectedIndex="0"
+					Width="200"
+				/>
+				<StackPanel
+					Orientation="Horizontal"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Top"
+					Margin="10"
+				>
+					<TextBlock
+						Text="Opacity"
+						VerticalAlignment="Center"
+						Foreground="DarkBlue"
+					/>
+					<Slider
+						x:Name="aOpacitySlider"
+						Width="150"
+						Margin="5"
+						Minimum="0"
+						Maximum="1"
+						SmallChange="0.1"
+						LargeChange="0.2"
+						Value="1"
+					/>
+					<TextBlock
+						Text="{Binding ElementName=aOpacitySlider, Path=Value, StringFormat=F1}"
+						VerticalAlignment="Center"
+					/>
+				</StackPanel>
+			</StackPanel>
+			<StackPanel
+				Grid.Row="2"
+				Grid.Column="1"
+				Orientation="Vertical"
+			>
+				<ComboBox
+					x:Name="bImageComboBox"
+					HorizontalAlignment="Center"
+					Margin="10"
+					DisplayMemberPath="DisplayName"
+					SelectedValuePath="Image.Source"
+					SelectedIndex="0"
+					Width="200"
+				/>
+				<StackPanel
+					Orientation="Horizontal"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Top"
+					Margin="10"
+				>
+					<TextBlock
+						Text="Opacity"
+						VerticalAlignment="Center"
+						Foreground="DarkBlue"
+					/>
+					<Slider
+						x:Name="bOpacitySlider"
+						Width="150"
+						Margin="5"
+						Minimum="0"
+						Maximum="1"
+						SmallChange="0.1"
+						LargeChange="0.2"
+						Value="1"
+					/>
+					<TextBlock
+						Text="{Binding ElementName=bOpacitySlider, Path=Value, StringFormat=F1}"
+						VerticalAlignment="Center"
+					/>
+				</StackPanel>
+			</StackPanel>
+
+			<ListBox
+				x:Name="effectsListBox"
+				Grid.Row="2"
+				Grid.Column="2"
+				Margin="30,10"
+				SelectionChanged="effectsListBox_SelectionChanged"
+			/>
+		</Grid>
+	</Grid>
+</Window>
