@@ -30,6 +30,8 @@
 			<Path Width="266.667" Height="186.031" Canvas.Left="1.77869" Canvas.Top="1.33398" Stretch="Fill" Fill="#3400B3FF" Data="F1 M 135.112,1.33398C 61.476,1.33398 1.77869,61.0274 1.77869,134.667C 1.77869,136.838 1.84135,139.001 1.94271,141.151C 34.0107,169.39 82.1387,187.365 135.967,187.365C 188.807,187.365 236.131,170.037 268.183,142.698C 268.341,140.037 268.445,137.365 268.445,134.667C 268.445,61.0274 208.752,1.33398 135.112,1.33398 Z "/>
 			<Path Width="24.8773" Height="46.296" Canvas.Left="12.6615" Canvas.Top="89.8551" Stretch="Fill" Fill="#9AFFFFFF" Data="F1 M 29.4975,136.151C 30.9508,125.37 33.6748,114.99 37.5388,105.178C 30.1015,101.776 23.8148,96.4591 19.3722,89.8551C 15.8042,100.36 13.5055,111.448 12.6615,122.943C 18.0415,127.687 23.6535,132.099 29.4975,136.151 Z "/>
 			<Path Width="34.8987" Height="82.688" Canvas.Left="12.5104" Canvas.Top="140.13" Stretch="Fill" Fill="#9AFFFFFF" Data="F1 M 28.3491,151.266C 22.8904,147.834 17.6091,144.12 12.5104,140.13C 14.2678,171.948 27.1771,200.796 47.4091,222.818C 35.2731,202.73 28.2838,179.178 28.2838,153.995C 28.2838,153.078 28.3304,152.178 28.3491,151.266 Z "/>
+
+			<!-- cplotts note: this path/geometry ... is the geometry of the object that we're actually blending into the background -->
 			<Path
 				Width="201.031"
 				Height="148.821"
@@ -39,6 +41,8 @@
 				Data="F1 M 235.627,82.9013C 235.627,123.996 190.627,157.307 135.113,157.307C 79.602,157.307 34.5967,123.996 34.5967,82.9013C 34.5967,41.8027 79.602,8.48535 135.113,8.48535C 190.627,8.48535 235.627,41.8027 235.627,82.9013 Z "
 				Opacity="0.8"
 			>
+				<!-- cplotts note: this fill is just for the designer surface. -->
+				<!--
 				<Path.Fill>
 					<LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
 						<LinearGradientBrush.GradientStops>
@@ -47,9 +51,11 @@
 						</LinearGradientBrush.GradientStops>
 					</LinearGradientBrush>
 				</Path.Fill>
+				-->
 				<i:Interaction.Behaviors>
 					<local:BackgroundEffectBehavior Visual="{Binding ElementName=backgroundCanvas, Mode=OneWay}">
 						<local:BackgroundEffectBehavior.Effect>
+							<!-- cplotts note: here is where we set the blend mode effect ... to screen. -->
 							<bme:ScreenEffect>
 								<bme:ScreenEffect.BInput>
 									<ImageBrush>
@@ -61,6 +67,7 @@
 															<RectangleGeometry Rect="0,0,1,1"/>
 														</GeometryDrawing.Geometry>
 														<GeometryDrawing.Brush>
+															<!-- cplotts note: this is the brush that we're actually blending into the background -->
 															<LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
 																<LinearGradientBrush.GradientStops>
 																	<GradientStop Color="#CD000000" Offset="0"/>
