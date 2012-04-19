@@ -10,7 +10,7 @@
 	Height="500"
 >
 	<!-- cplotts note: -->
-	<!-- This is a real world example that happened. Uh. I can't remember really. -->
+	<!-- This is a real world example that happened. Yes, I do, remember. -->
 	<Grid>
 		<Canvas x:Name="backgroundCanvas" Width="269.333" Height="269.333" Canvas.Left="0" Canvas.Top="0">
 			<Path Width="269.333" Height="269.333" Canvas.Left="4.06901e-005" Canvas.Top="0" Stretch="Fill" Fill="#FF0D0099" Data="F1 M 269.333,134.667C 269.333,209.041 209.044,269.333 134.667,269.333C 60.2947,269.333 4.06901e-005,209.041 4.06901e-005,134.667C 4.06901e-005,60.292 60.2947,0 134.667,0C 209.044,0 269.333,60.292 269.333,134.667 Z "/>
