@@ -36,6 +36,7 @@
 		<Button Margin="10,2,10,2" FontSize="11pt">HelloWorldTestWindow</Button>
 		<Button Margin="10,2,10,2" FontSize="11pt">HelloWorldVideoTestWindow</Button>
 		<Button Margin="10,2,10,2" FontSize="11pt">BlueBulbWindow</Button>
+		<Button Margin="10,2,10,2" FontSize="11pt">RedBulbWindow</Button>
 		<Button Margin="10,2,10,2" FontSize="11pt">Close</Button>
 	</StackPanel>
 </Window>
