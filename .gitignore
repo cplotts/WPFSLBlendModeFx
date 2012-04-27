@@ -1,3 +1,26 @@
-# ignore all obj directories
 obj/
+bin/
 *.suo
+WPFBlendModeEffectLibrary/ShaderSource/AverageEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/ColorBurnEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/ColorDodgeEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/DarkenEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/DifferenceEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/ExclusionEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/GlowEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/HardLightEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/HardMixEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/LightenEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/LinearBurnEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/LinearDodgeEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/LinearLightEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/MultiplyEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/NegationEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/NormalEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/OverlayEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/PhoenixEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/PinLightEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/ReflectEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/ScreenEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/SoftLightEffect.ps
+WPFBlendModeEffectLibrary/ShaderSource/VividLightEffect.ps
