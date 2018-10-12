@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <UsingTask TaskName="ShaderBuildTask.PixelShaderCompile" AssemblyName="ShaderBuildTask, Version=1.0.3072.18169, Culture=neutral, PublicKeyToken=44e467d1687af125" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -109,66 +108,66 @@
     <Compile Include="EffectFiles\SoftLightEffect.cs" />
     <Compile Include="EffectFiles\VividLightEffect.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
-    <Effect Include="ShaderSource\LinearBurnEffect.fx" />
-    <Effect Include="ShaderSource\DarkenEffect.fx" />
-    <Effect Include="ShaderSource\LightenEffect.fx" />
+    <None Include="ShaderSource\LinearBurnEffect.fx" />
+    <None Include="ShaderSource\DarkenEffect.fx" />
+    <None Include="ShaderSource\LightenEffect.fx" />
   </ItemGroup>
   <ItemGroup>
-    <Effect Include="ShaderSource\MultiplyEffect.fx" />
+    <None Include="ShaderSource\MultiplyEffect.fx" />
   </ItemGroup>
   <ItemGroup>
-    <Effect Include="ShaderSource\DifferenceEffect.fx" />
+    <None Include="ShaderSource\DifferenceEffect.fx" />
   </ItemGroup>
   <ItemGroup>
-    <Effect Include="ShaderSource\NormalEffect.fx" />
+    <None Include="ShaderSource\NormalEffect.fx" />
   </ItemGroup>
   <ItemGroup>
-    <Effect Include="ShaderSource\ScreenEffect.fx" />
+    <None Include="ShaderSource\ScreenEffect.fx" />
   </ItemGroup>
   <ItemGroup>
-    <Effect Include="ShaderSource\ColorBurnEffect.fx" />
+    <None Include="ShaderSource\ColorBurnEffect.fx" />
   </ItemGroup>
   <ItemGroup>
-    <Effect Include="ShaderSource\ColorDodgeEffect.fx" />
+    <None Include="ShaderSource\ColorDodgeEffect.fx" />
   </ItemGroup>
   <ItemGroup>
-    <Effect Include="ShaderSource\LinearDodgeEffect.fx" />
+    <None Include="ShaderSource\LinearDodgeEffect.fx" />
   </ItemGroup>
   <ItemGroup>
-    <Effect Include="ShaderSource\OverlayEffect.fx" />
+    <None Include="ShaderSource\OverlayEffect.fx" />
   </ItemGroup>
   <ItemGroup>
-    <Effect Include="ShaderSource\ExclusionEffect.fx" />
+    <None Include="ShaderSource\ExclusionEffect.fx" />
   </ItemGroup>
   <ItemGroup>
-    <Effect Include="ShaderSource\SoftLightEffect.fx" />
+    <None Include="ShaderSource\SoftLightEffect.fx" />
   </ItemGroup>
   <ItemGroup>
-    <Effect Include="ShaderSource\HardLightEffect.fx" />
+    <None Include="ShaderSource\HardLightEffect.fx" />
   </ItemGroup>
   <ItemGroup>
-    <Effect Include="ShaderSource\VividLightEffect.fx" />
+    <None Include="ShaderSource\VividLightEffect.fx" />
   </ItemGroup>
   <ItemGroup>
-    <Effect Include="ShaderSource\LinearLightEffect.fx" />
+    <None Include="ShaderSource\LinearLightEffect.fx" />
   </ItemGroup>
   <ItemGroup>
-    <Effect Include="ShaderSource\PinLightEffect.fx" />
+    <None Include="ShaderSource\PinLightEffect.fx" />
   </ItemGroup>
   <ItemGroup>
-    <Effect Include="ShaderSource\HardMixEffect.fx" />
+    <None Include="ShaderSource\HardMixEffect.fx" />
   </ItemGroup>
   <ItemGroup>
-    <Effect Include="ShaderSource\ReflectEffect.fx" />
+    <None Include="ShaderSource\ReflectEffect.fx" />
   </ItemGroup>
   <ItemGroup>
-    <Effect Include="ShaderSource\GlowEffect.fx" />
+    <None Include="ShaderSource\GlowEffect.fx" />
   </ItemGroup>
   <ItemGroup>
-    <Effect Include="ShaderSource\NegationEffect.fx" />
+    <None Include="ShaderSource\NegationEffect.fx" />
   </ItemGroup>
   <ItemGroup>
-    <Effect Include="ShaderSource\PhoenixEffect.fx" />
+    <None Include="ShaderSource\PhoenixEffect.fx" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -193,8 +192,31 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="ShaderSource\AverageEffect.ps" />
+    <Resource Include="ShaderSource\ColorBurnEffect.ps" />
+    <Resource Include="ShaderSource\ColorDodgeEffect.ps" />
+    <Resource Include="ShaderSource\DarkenEffect.ps" />
+    <Resource Include="ShaderSource\DifferenceEffect.ps" />
+    <Resource Include="ShaderSource\ExclusionEffect.ps" />
+    <Resource Include="ShaderSource\GlowEffect.ps" />
+    <Resource Include="ShaderSource\HardLightEffect.ps" />
+    <Resource Include="ShaderSource\HardMixEffect.ps" />
+    <Resource Include="ShaderSource\LightenEffect.ps" />
+    <Resource Include="ShaderSource\LinearBurnEffect.ps" />
+    <Resource Include="ShaderSource\LinearDodgeEffect.ps" />
+    <Resource Include="ShaderSource\LinearLightEffect.ps" />
+    <Resource Include="ShaderSource\MultiplyEffect.ps" />
+    <Resource Include="ShaderSource\NegationEffect.ps" />
+    <Resource Include="ShaderSource\NormalEffect.ps" />
+    <Resource Include="ShaderSource\OverlayEffect.ps" />
+    <Resource Include="ShaderSource\PhoenixEffect.ps" />
+    <Resource Include="ShaderSource\PinLightEffect.ps" />
+    <Resource Include="ShaderSource\ReflectEffect.ps" />
+    <Resource Include="ShaderSource\ScreenEffect.ps" />
+    <Resource Include="ShaderSource\SoftLightEffect.ps" />
+    <Resource Include="ShaderSource\VividLightEffect.ps" />
     <Resource Include="ShaderSource\ColorEffect.ps" />
-    <Effect Include="ShaderSource\AverageEffect.fx" />
+    <None Include="ShaderSource\AverageEffect.fx" />
     <None Include="ShaderSource\ColorEffect.fx" />
     <None Include="ShaderSource\HueEffect.fx" />
     <None Include="ShaderSource\LuminosityEffect.fx" />
@@ -204,13 +226,4 @@
     <Resource Include="ShaderSource\HueEffect.ps" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="EffectCompile" Condition="'@(Effect)' != '' ">
-    <PixelShaderCompile Sources="@(Effect)">
-      <Output TaskParameter="Outputs" ItemName="Resource" />
-    </PixelShaderCompile>
-  </Target>
-  <PropertyGroup>
-    <!-- Add effect compilation to the PrepareResourcesDependsOn so that the effect fx  get compiled before resources are collected -->
-    <PrepareResourcesDependsOn>EffectCompile;$(PrepareResourcesDependsOn)</PrepareResourcesDependsOn>
-  </PropertyGroup>
 </Project>
