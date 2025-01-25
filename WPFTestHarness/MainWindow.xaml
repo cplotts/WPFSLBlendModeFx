@@ -28,6 +28,16 @@
 		>
 			Test Harness
 		</TextBlock>
+		<TextBlock
+			FontSize="8pt"
+			Margin="10,0,10,10"
+			TextAlignment="Center"
+			TextWrapping="Wrap"
+		>
+			Remember: these effects, compiled as PS 3.0 shaders, do not work with software rendering.
+			PS 2.0 shaders do work with software rendering. A project for later,
+			but I wonder if it is possible to rebuild these effects as PS 2.0 shaders.
+		</TextBlock>
 
 		<Button Margin="10,2,10,2" FontSize="11pt">LinearBurnTestWindow</Button>
 		<Button Margin="10,2,10,2" FontSize="11pt">GradientTestWindow</Button>
