@@ -2,7 +2,7 @@
 	x:Class="WPFTestHarness.HelloWorldVideoTestWindow"
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+	xmlns:i="clr-namespace:Microsoft.Xaml.Behaviors;assembly=Microsoft.Xaml.Behaviors"
 	xmlns:bme="clr-namespace:BlendModeEffectLibrary;assembly=BlendModeEffectLibrary"
 	xmlns:local="clr-namespace:WPFTestHarness"
 	Title="HelloWorldTestWindow"
